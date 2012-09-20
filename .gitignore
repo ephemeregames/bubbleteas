@@ -4,3 +4,4 @@
 /tmp
 .idea
 /config/database.yml
+/public/assets
