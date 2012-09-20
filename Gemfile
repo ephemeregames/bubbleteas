@@ -6,6 +6,7 @@ gem 'sqlite3'                                                         # Database
 gem 'jquery-rails'                                                    # JQuery
 gem 'thin'                                                            # Web server (instead of Webrick)
 gem 'backbone-rails'                                                  # Backbone for responsive client-side
+gem 'pg'                                                              # Database for Heroku
 
 group :assets do
   gem 'haml'                                                          # Haml to generate HTML
