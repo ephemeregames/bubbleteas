@@ -1,12 +1,16 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'                                                  # Rails
-gem 'sqlite3'                                                         # Database
 #gem 'inherited_resources'                                             # DRY controllers
 gem 'jquery-rails'                                                    # JQuery
 gem 'thin'                                                            # Web server (instead of Webrick)
 gem 'backbone-rails'                                                  # Backbone for responsive client-side
 gem 'pg'                                                              # Database for Heroku
+
+
+group :development do
+  gem 'sqlite3'                                                       # Database
+end
 
 group :assets do
   gem 'haml'                                                          # Haml to generate HTML
