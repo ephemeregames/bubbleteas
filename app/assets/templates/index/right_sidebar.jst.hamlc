@@ -1,0 +1,23 @@
+.bubble_teas.section
+  .well.well-small
+    %strong= I18n.t('sidebar.my_bubbles')
+  .content
+    - if @bubble_teas.length > 0
+      - for bubble_tea in @bubble_teas
+        != JST['index/bubble_tea'](bubble_tea)
+    - else
+      %span.label.label-important= I18n.t('index.bubble_tea.nothing_bubble')
+      %span!= I18n.t('index.bubble_tea.nothing')
+
+
+%p
+
+.top_bubble_teas.section
+  .well.well-small
+    %strong= I18n.t('sidebar.top')
+  .content
+    - if @top_bubble_teas.length > 0
+      - for bubble_tea in @top_bubble_teas
+        != JST['index/bubble_tea'](bubble_tea)
+    - else
+      %p Aucun choix pour l'instant.

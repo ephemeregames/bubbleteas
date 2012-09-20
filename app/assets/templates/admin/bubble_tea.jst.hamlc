@@ -1,0 +1,14 @@
+%td.name
+  .show= @name
+  .edit.input-append
+    %input{ type: 'text', class: 'input-medium', value: @name }
+    %button.btn.btn-success.confirm
+      %i.icon-white.icon-ok
+    %button.btn.btn-danger.cancel
+      %i.icon-white.icon-remove
+%td.icon
+  %button.btn.btn-small.btn-warning.chef_choice.disabled{ data-toggle: 'button', class: if @chef_choice then 'active' else '' }
+    %i.icon-heart{ class: if @chef_choice then '' else 'icon-white' }
+%td.icon
+  %button.btn.btn-small.btn-danger.delete.disabled
+    %i.icon-white.icon-remove

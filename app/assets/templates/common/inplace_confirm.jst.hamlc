@@ -1,0 +1,5 @@
+.inplace_confirmation
+  .message= I18n.t('common.destroy.confirm')
+  .confirm
+    %button.btn.btn-small.btn-primary{ data: { dismiss: 'clickover' } }
+      %i.icon-white.icon-ok

@@ -1,0 +1,153 @@
+/*
+ *= require jquery.miniColors
+ *= require twitter/bootstrap
+ *= require_self
+ *= require_tree .
+*/
+
+.centered { text-align: center }
+
+// Cannot use. Conflicting with bootstrap classes
+//.left     { text-align: left }
+//.right    { text-align: right }
+
+
+// Make the site take up as much vertical space as possible
+html, body, #content {
+  height: 100%;
+}
+
+// Add padding for the top menu bar
+body {
+  padding-top: 40px;
+}
+
+
+// The three-columns main page
+#columns {
+  height: 100%;
+  width: 100%;
+
+  #left_sidebar {
+    min-width: 300px;
+    width: 300px;
+    vertical-align: top;
+
+    .generator {
+      .ingredient_category {
+        line-height: 30px;
+        margin: 20px;
+      }
+
+      .progress {
+        margin-left: 5%;
+        width: 90%;
+        text-align: center;
+      }
+
+    }
+  }
+
+
+  #right_sidebar {
+    min-width: 300px;
+    width: 300px;
+    vertical-align: top;
+  }
+
+
+  #index_content {
+    background-color: #EEE;
+    vertical-align: top;
+    box-shadow:
+      inset 10px 0 5px -5px #AAA,
+      inset -10px 0 5px -5px #AAA;
+
+    .content {
+      margin: 30px;
+
+      .thumbnail {
+        background-color: white;
+      }
+
+      // Preview of the bubble tea
+      .preview {
+        text-align: center;
+      }
+
+      // The creation of a new bubble tea
+      .newBubbleTea {
+        text-align: center;
+
+        .well {
+          background-color: #5dba5d;
+          color: white;
+        }
+      }
+
+    }
+
+    .hero-unit {
+      width: 600px;
+      padding: 30px;
+    }
+
+  }
+}
+
+
+.section {
+  .content {
+    min-height: 300px;
+    padding: 10px;
+    line-height: 30px;
+
+    .bubble_tea {
+      padding: 5px 5px 10px 5px;
+      border: 1px solid #E3E3E3;
+      background-color: #f5f5f5;
+      line-height: 20px;
+
+      .ingredients {
+
+      }
+
+      .rating {
+        float: right;
+      }
+    }
+  }
+}
+
+
+.well {
+  margin-bottom: 5px;
+}
+
+
+.composition {
+  .ingredient {
+    text-align: center;
+    padding: 5px;
+    color: white;
+  }
+}
+
+
+// Confirmation message (before deleting a resource for example)
+.inplace_confirmation {
+  .confirm {
+    text-align: right;
+  }
+}
+
+
+table {
+  thead, tbody {
+    tr {
+      th, td {
+        &.icon { width: 1px; }
+      }
+    }
+  }
+}

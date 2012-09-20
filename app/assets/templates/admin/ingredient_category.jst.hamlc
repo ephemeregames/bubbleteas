@@ -1,0 +1,11 @@
+%td{ colspan: 2 }
+  %strong.name= @name
+  .edit.input-append
+    %input{ type: 'text', class: 'input-medium', value: @name }
+    %button.btn.btn-success.confirm_edit
+      %i.icon-white.icon-ok
+    %button.btn.btn-danger.cancel_edit
+      %i.icon-white.icon-remove
+%td
+  %button.btn.btn-small.btn-danger.delete.disabled
+    %i.icon-white.icon-remove

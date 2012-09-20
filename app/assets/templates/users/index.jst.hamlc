@@ -1,0 +1,5 @@
+- @users.each (user) ->
+  .user
+    = user.get('id')
+    = user.get('username')
+    = user.get('password')

@@ -1,0 +1,18 @@
+!!!
+
+%html
+  %head
+    %title= t('menu.title')
+
+    = stylesheet_link_tag :application, media: 'all'
+    = javascript_include_tag :application
+    = csrf_meta_tags
+
+  %body
+    #header
+    #content= yield
+
+
+:coffeescript
+  I18n.defaultLocale = "#{ I18n.default_locale }"
+  I18n.locale = "#{ I18n.locale }"

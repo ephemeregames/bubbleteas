@@ -1,0 +1,77 @@
+fr:
+  activerecord:
+    models:
+      user: "Utilisateur"
+      bubble_tea: "Bubble tea"
+      ingredient: "Ingrédient"
+      ingredient_category: "Catégorie"
+    attributes:
+      bubble_tea:
+        name: "Nom"
+      user:
+        username: "Nom d'utilisateur"
+        password: "Mot de passe"
+      ingredient:
+        ingredient_category_id: "Catégorie"
+        color: "Couleur"
+        image: "Image"
+        name: "Nom"
+      ingredient_category:
+        name: "Nom"
+    errors:
+      messages:
+        less_than: "<strong>%{attribute}</strong> doit être plus petit que %{count}"
+        less_than_or_equal_to: "<strong>%{attribute}</strong> doit être plus petit ou égal à %{count}"
+        greater_than: "<strong>%{attribute}</strong> doit être plus grand que %{count}"
+        greater_than_or_equal_to: "<strong>%{attribute}</strong> doit être plus grand ou égal à %{count}"
+        blank: "<strong>%{attribute}</strong> ne doit pas être vide"
+        too_short: "<strong>%{attribute}</strong> est trop court"
+        taken: "<strong>%{attribute}</strong> est déjà pris et doit être unique"
+        record_invalid: "%{errors}"
+        invalid: "<strong>%{attribute}</strong> ne semble pas être d'un format valide"
+        uniqueness_of_index: "Cette combinaison a déjà été prise (%{attributes})"
+        end_after_start: "La date de fin doit être postérieure à la date de début"
+        date_invalid: "Le format de la date est invalide"
+        not_a_number: "<strong>%{attribute}</strong> n'est pas un nombre"
+        already_exists: "Cette composition existe déjà"
+  button:
+    login: "Connexion"
+  common:
+    add: "Ajouter"
+    destroy:
+      confirm: "Êtes-vous sûr de vouloir détruire cette ressource?"
+  menu:
+    title: 'Bubbles!'
+    login: "Se connecter"
+    index: "Acceuil"
+    admin: "Administration"
+  admin:
+    category:
+      name: "Nom de la catégorie"
+    ingredient:
+      title: "Ingrédients"
+      name: "Nom de l'ingrédient"
+      color: "Couleur"
+      image: "Image"
+    bubble_tea:
+      title: "Bubble teas"
+  index:
+    ingredient:
+      nothing_bubble: "Oh no!"
+      nothing: "Aucun ingrédient n'est disponible. Vous devez créer des ingrédients dans l'<a href='#admin'>administration</a>."
+    bubble_tea:
+      nothing_bubble: "Snif!"
+      nothing: "Vous n'avez créé aucun bubble tea! Utilisez le générateur à droite pour créer un bubble tea et l'ajouter dans votre liste! Vous allez même avoir l'honneur de le nommer!"
+      name: "Nom du bubble tea"
+    preview:
+      no_canvas: "Oh no! Vous devez avoir un navigateur assez cool qui supporte le canvas HTML5!"
+  sidebar:
+    generator: "Générateur"
+    my_bubbles: "Mes bubble teas"
+    chef_choice: "Choix du chef"
+    top: "Top"
+  content:
+    welcome: "Bienvenue sur Bubbles!"
+    info: "Créez vos bubble teas préférés en choisissant les ingrédients à gauche!"
+  errors:
+    login_failed: "Nom d'utilisateur ou mot de passe invalide"

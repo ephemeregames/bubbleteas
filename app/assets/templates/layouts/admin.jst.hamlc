@@ -1,0 +1,4 @@
+#content.row-fluid.admin
+  .span12#error_messages
+  .span4#ingredients
+  .span4#bubble_teas

@@ -1,0 +1,6 @@
+%tr.add_category
+  %td{ colspan: 2 }
+    %input{ type: 'text', class: 'input-medium', placeholder: I18n.t('admin.category.name') }
+  %td
+    %button.btn.btn-small.btn-success.add.disabled
+      %i.icon-white.icon-plus

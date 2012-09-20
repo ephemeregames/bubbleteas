@@ -1,0 +1,2 @@
+- for ingredient in @ingredients
+  .ingredient{ id: ingredient.id, style: "background-color: #{ingredient.color};" }= ingredient.name

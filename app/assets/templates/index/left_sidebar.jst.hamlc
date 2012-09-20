@@ -1,0 +1,30 @@
+.generator.section
+  .well.well-small
+    %strong= I18n.t('sidebar.generator')
+
+    - if @categories.length > 0
+      .btn-group.pull-right
+        %button.btn.btn-small.btn-success.reset
+          %i.icon-white.icon-repeat
+        %button.btn.btn-small.btn-success.shuffle
+          %i.icon-white.icon-random
+  .content
+    .categories
+
+    - if @categories.length > 0
+      .progress.progress-striped.progress-success.active
+        .bar{ style: 'width: 0%' }
+    - else
+      %span.label.label-important= I18n.t('index.ingredient.nothing_bubble')
+      %span!= I18n.t('index.ingredient.nothing')
+
+%p
+.chef_choice.section
+  .well.well-small
+    %strong= I18n.t('sidebar.chef_choice')
+  .content
+    - if @chef_choices.length > 0
+      - for bubble_tea in @chef_choices
+        != JST['index/bubble_tea'](bubble_tea)
+    - else
+      %p Aucun choix pour l'instant.

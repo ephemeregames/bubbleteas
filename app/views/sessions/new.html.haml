@@ -1,0 +1,11 @@
+= form_for @user, url: session_path, remote: true do |f|
+  .container-fluid
+
+    - if @user.errors.any?
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+
+    .row-fluid.span12= f.text_field :username, placeholder: User.human_attribute_name(:username)
+    .row-fluid.span12= f.password_field :password, placeholder: User.human_attribute_name(:password)
+    .row-fluid.span12.centered= f.submit t('button.login'), class: 'btn btn-primary'

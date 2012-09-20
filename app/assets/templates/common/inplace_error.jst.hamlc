@@ -1,0 +1,4 @@
+.inplace_error
+  - for _, errs of @errors
+    %span!= errs.join(',') + '.'
+    - break

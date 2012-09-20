@@ -1,0 +1,3 @@
+%legend= I18n.t('admin.bubble_tea.title')
+%table.table.table-striped.bubble_teas
+  %tbody

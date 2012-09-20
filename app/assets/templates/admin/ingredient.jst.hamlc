@@ -1,0 +1,13 @@
+%td.name
+  .show= @name
+  .edit.input-append
+    %input{ type: 'text', class: 'input-medium', value: @name }
+    %button.btn.btn-success.confirm
+      %i.icon-white.icon-ok
+    %button.btn.btn-danger.cancel
+      %i.icon-white.icon-remove
+%td.color{ background-color: "##{@color}" }
+  %input.colorify{ type: 'hidden', value: @color }
+%td
+  %button.btn.btn-small.btn-danger.delete.disabled
+    %i.icon-white.icon-remove

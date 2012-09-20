@@ -1,0 +1,9 @@
+#main_menu.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    -#.brand= I18n.t('menu.title')
+    %ul.nav
+      %li
+        %a.index{ href: '#/' }= I18n.t('menu.index')
+    %ul.nav.pull-right
+      %li
+        %a.admin{ href: '#/admin' }= I18n.t('menu.admin')

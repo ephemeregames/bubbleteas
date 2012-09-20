@@ -1,0 +1,12 @@
+%ul.thumbnails
+  %li.span4.thumbnail
+    .well.well-small
+      %strong Aperçu
+    .preview{ width: 284, height: 400 }
+      %canvas= I18n.t('index.preview.no_canvas')
+  %li.span4.thumbnail
+    .well.well-small
+      %strong= @name
+    .composition
+      - for ingredient in @ingredients
+        .ingredient{ id: ingredient.id, style: "background-color: #{ingredient.color};" }= ingredient.name

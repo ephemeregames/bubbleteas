@@ -1,0 +1,3 @@
+%legend= I18n.t('admin.ingredient.title')
+%table.table.table-striped.categories
+  %tbody

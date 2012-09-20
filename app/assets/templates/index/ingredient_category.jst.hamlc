@@ -1,0 +1,4 @@
+.btn.btn-small.btn-primary.disabled.category= @category.name
+- for ingredient in @category.ingredients
+  .btn.btn-small.ingredient{ id: ingredient.id }
+    %span.label{ style: "background-color: #{ingredient.color}" }= ingredient.name

@@ -1,0 +1,8 @@
+%tr.add_ingredient{ data-category_id: @category_id }
+  %td.name
+    %input{ type: 'text', class: 'input-medium', placeholder: I18n.t('admin.ingredient.name'), disabled: true }
+  %td.color
+    %input.colorify{ type: 'hidden', disabled: true, value: '#000000' }
+  %td
+    %button.btn.btn-small.btn-success.add.disabled
+      %i.icon-white.icon-plus

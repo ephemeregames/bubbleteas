@@ -1,0 +1,9 @@
+.bubble_tea
+  .name
+    %span
+      %a{ href: "#/bubble_tea/#{@id}" }= @name
+    %span.rating
+      %i.icon.icon-star
+  .ingredients
+    - for ingredient in @ingredients
+      %span.label.ingredient{ id: ingredient.id, style: "background-color: #{ingredient.color}" }= ingredient.name

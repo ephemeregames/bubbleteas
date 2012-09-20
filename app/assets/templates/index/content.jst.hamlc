@@ -1,0 +1,20 @@
+%ul.thumbnails
+  %li.span4.thumbnail
+    .well.well-small
+      %strong Aperçu
+    .preview{ width: 284, height: 400 }
+      %canvas= I18n.t('index.preview.no_canvas')
+  %li.span4.thumbnail
+    .well.well-small
+      %strong Composition
+    .composition
+  %li.span4.thumbnail.newBubbleTea
+    .well.well-small
+      %span.label.label-success Nice!
+      %span
+        %strong Tu as créé un bubble tea!
+    %small Nomme ta création et ajoute-la dans ta collection!
+    .input-append.addBubbleTea
+      %input{ type: 'text', placeholder: I18n.t('index.bubble_tea.name'), disabled: true }
+      %button.btn.btn-success.add.disabled
+        %i.icon-white.icon-plus

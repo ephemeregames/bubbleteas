@@ -1,0 +1,6 @@
+%table.index.#columns
+  %tr
+    %td#left_sidebar
+    %td#index_content
+      .content
+    %td#right_sidebar

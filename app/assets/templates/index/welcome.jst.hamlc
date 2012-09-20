@@ -1,0 +1,3 @@
+.hero-unit
+  %h1= I18n.t('content.welcome')
+  %p= I18n.t('content.info')
