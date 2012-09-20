@@ -24,9 +24,9 @@ class BubbleTea < ActiveRecord::Base
     def check_if_unique
 
       others = BubbleTeaIngredient.
-        select("bubble_tea_id, count(*) AS 'matching_ingredients'").
+        select("bubble_tea_id, count(*)").
         where("ingredient_id IN (#{self.ingredients.map(&:ingredient_id).join(',')})").
-        group('bubble_tea_id').having("matching_ingredients >= #{self.ingredients.size}").all
+        group('bubble_tea_id').having("count >= #{self.ingredients.size}").all
 
       if others.size > 0
         errors.add(:bubble_tea, I18n.t('activerecord.errors.messages.already_exists'))
