@@ -23,12 +23,13 @@ class BubbleTea < ActiveRecord::Base
 
     def check_if_unique
 
-      others = BubbleTeaIngredient.
-        select("bubble_tea_id, count(*)").
-        where("ingredient_id IN (#{self.ingredients.map(&:ingredient_id).join(',')})").
-        group('bubble_tea_id').having("count >= #{self.ingredients.size}").all
+      # oh my god.
+      others = BubbleTea.includes(:ingredients).all.map{ |bt| bt.ingredients.map(&:ingredient_id) }
+      composition = self.ingredients.map(&:ingredient_id)
 
-      if others.size > 0
+      others.reject!{ |o| o != composition }
+
+      unless others.empty?
         errors.add(:bubble_tea, I18n.t('activerecord.errors.messages.already_exists'))
       end
 
